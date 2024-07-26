@@ -22,7 +22,7 @@ API_HASH = os.environ.get("API_HASH", "c3293e52df0923a9e0b541e949363d37")
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "7061235331:AAFDSzo767eace9hAyLXIYrFreNlJBeN2p0")  # Bot token from @BotFather
 ADMINS = (
     [int(i.strip()) for i in os.environ.get("ADMINS").split(",")]
-    if os.environ.get("ADMINS")
+    if os.environ.get("ADMINS", "1608576332")
     else []
 )
 
@@ -30,7 +30,7 @@ DATABASE_NAME = os.environ.get("DATABASE_NAME", "MdiskConvertor")
 DATABASE_URL = os.environ.get(
     "DATABASE_URL", None
 )  # mongodb uri from https://www.mongodb.com/
-OWNER_ID = int(os.environ.get("OWNER_ID"))  # id of the owner
+OWNER_ID = int(os.environ.get("OWNER_ID", "1608576332"))  # id of the owner
 ADMINS.append(OWNER_ID) if OWNER_ID not in ADMINS else []
 
 #  Optionnal variables
