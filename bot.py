@@ -14,6 +14,24 @@ from database.users import filter_users
 from helpers import temp
 from utils import broadcast_admins, create_server, set_commands
 
+const express = require('express');
+const app = express();
+
+// Define a default port or use the PORT environment variable
+const port = process.env.PORT || 3000;
+
+// Define a simple route
+app.get('/', (req, res) => {
+  res.send('Hello, world!');
+});
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
+
+
+
 # Get logging configurations
 logging.config.fileConfig("logging.conf")
 logging.getLogger().setLevel(logging.INFO)
